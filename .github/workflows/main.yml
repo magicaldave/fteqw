@@ -96,7 +96,7 @@ jobs:
             engine/*/ftewebgl.html
             engine/*/ftewebgl.wasm
           compression-level: 9
-  Cross-W64:
+  Cross-W64-t:
     runs-on: ubuntu-latest
 
     steps:
