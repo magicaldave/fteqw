@@ -102,5 +102,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Get-deps
-      run: |
-        cd engine && make makelibs FTE_TARGET=win64 && make m-rel plugins-rel FTE_TARGET=win64 NATIVE_PLUGINS="openssl ezhud" -j8
+        run: |
+          cd engine && make makelibs FTE_TARGET=win64 && make m-rel plugins-rel FTE_TARGET=win64 NATIVE_PLUGINS="openssl ezhud" -j8
