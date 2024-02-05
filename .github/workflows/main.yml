@@ -96,3 +96,11 @@ jobs:
             engine/*/ftewebgl.html
             engine/*/ftewebgl.wasm
           compression-level: 9
+  Cross-W64:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get-deps
+      run: |
+        cd engine && make makelibs FTE_TARGET=win64 && make m-rel plugins-rel FTE_TARGET=win64 NATIVE_PLUGINS="openssl ezhud" -j8
