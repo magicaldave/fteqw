@@ -106,3 +106,13 @@ jobs:
         run: |
           apt get update && apt get upgrade && apt install mesa-common-dev mingw-w64-i686-dev
           cd engine && make makelibs FTE_TARGET=win64 && make m-rel plugins-rel FTE_TARGET=win64 NATIVE_PLUGINS="openssl" -j3
+           7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on mmcqe-win64.7z release/fteplug_openssl_x64.dll release/fteqw64.exe
+
+      - name: Upload Release
+        if: github.event_name != 'pull_request'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: Stable-CI
+          files: mmcqe-win64.7z
+          body: |
+            CI Build for MMCQE Quake 1 server
