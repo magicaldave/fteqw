@@ -26,6 +26,8 @@ jobs:
             libasound2-dev                                              \
             libbullet-dev                                               \
             libgnutls28-dev                                             \
+            mesa-common-dev                                             \
+            libgl-dev                                                   \
             libopenxr-dev                                               \
             libqscintilla2-qt5-dev                                      \
             libsdl2-dev                                                 \
