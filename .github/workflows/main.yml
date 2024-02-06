@@ -104,7 +104,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Get-deps
         run: |
-          apt get update && apt get upgrade && apt install mesa-common-dev binutils-mingw-w64-x86-64 binutils-mingw-w64 mingw-w64-i686-dev
+          apt get update && apt get upgrade && apt install libgl-dev mesa-common-dev binutils-mingw-w64-x86-64 binutils-mingw-w64 mingw-w64-i686-dev
           cd engine && make makelibs FTE_TARGET=win64 && make m-rel plugins-rel FTE_TARGET=win64 NATIVE_PLUGINS="openssl" -j3
            7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on mmcqe-win64.7z release/fteplug_openssl_x64.dll release/fteqw64.exe
 
