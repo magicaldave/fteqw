@@ -477,7 +477,7 @@ ifeq ($(FTE_TARGET),win64)
 endif
 #statically link openssl on the above systems (instead of depending on system libs)
 ifneq ($(OSSL_ARCH),)
-OSSL_VERSION=3.0.1
+OSSL_VERSION=3.1.5
 ARCHLIBS=../engine/libs-$(ARCH)
 #../engine/libs-$(ARCH)/openssl-$(OSSL_VERSION).tar.gz:
 ../engine/openssl-$(OSSL_VERSION).tar.gz:
