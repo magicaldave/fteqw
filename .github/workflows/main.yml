@@ -105,4 +105,4 @@ jobs:
       - name: Get-deps
         run: |
           apt get update && apt get upgrade && apt install mesa-common-dev
-          cd engine && make makelibs FTE_TARGET=win64 && make m-rel plugins-rel FTE_TARGET=win64 NATIVE_PLUGINS="openssl ezhud" -j8
+          cd engine && make makelibs FTE_TARGET=win64 && make m-rel plugins-rel FTE_TARGET=win64 NATIVE_PLUGINS="openssl" -j3
