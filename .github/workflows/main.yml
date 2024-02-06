@@ -104,5 +104,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Get-deps
         run: |
-          apt get update && apt get upgrade && apt install mesa-common-dev
+          apt get update && apt get upgrade && apt install mesa-common-dev mingw-w64-i686-dev
           cd engine && make makelibs FTE_TARGET=win64 && make m-rel plugins-rel FTE_TARGET=win64 NATIVE_PLUGINS="openssl" -j3
